@@ -18,6 +18,7 @@ module org.example.project490 {
 
     opens org.example.project490 to javafx.fxml;
     exports org.example.project490;
+    opens org.example.project490.modelview to javafx.fxml;
 
  /*   opens com.example.csc325_firebase_webview_auth;
     exports com.example.csc325_firebase_webview_auth;

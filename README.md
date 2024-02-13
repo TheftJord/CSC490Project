@@ -16,6 +16,7 @@ Description:
 the information about each customer and it stored in an easy to access fashion
 
 Includes:
+
 -First name
 
 -Last name

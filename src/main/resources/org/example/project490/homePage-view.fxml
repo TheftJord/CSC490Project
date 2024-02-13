@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project490.HomePageController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1300.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#switchToHome" text="Home Page" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeGUI" text="Close Application" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ledger" />
+            <Menu mnemonicParsing="false" text="Store" />
+            <Menu mnemonicParsing="false" text="Customer">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCustomerProfile" text="Customer Profile" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Text layoutX="591.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Homepage">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="400.0" fitWidth="300.0" layoutX="509.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/managementLogo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="618.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

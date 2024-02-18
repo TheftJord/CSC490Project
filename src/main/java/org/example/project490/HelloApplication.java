@@ -6,7 +6,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
+import javafx.stage.Screen;
+import javafx.stage.StageStyle;
 
 public class HelloApplication extends Application {
     
@@ -15,9 +18,19 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("homePage-view.fxml"));
-        scene = new Scene(fxmlLoader.load(), 1300, 850);
+        scene = new Scene(fxmlLoader.load());
         stage.setTitle("Buisness Management System");
         stage.setScene(scene);
+        
+        //following code will find the resolution of the screen being used, and resize the GUI to match it
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        stage.initStyle(StageStyle.DECORATED);
+        stage.setX(screenBounds.getMinX());
+        stage.setY(screenBounds.getMinY());
+        stage.setWidth(screenBounds.getWidth());
+        stage.setHeight(screenBounds.getHeight());
+        stage.setMaxWidth(screenBounds.getWidth() * 2);
+        
         stage.show();
     }
     

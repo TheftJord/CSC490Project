@@ -1,86 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project490.CustomerProfileController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project490.CustomerProfileController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <Text layoutX="50.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name: ">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <TextField fx:id="firstNameTextField" layoutX="50.0" layoutY="125.0" prefHeight="38.0" prefWidth="421.0" />
-      <TextField fx:id="streetAddressTextField" layoutX="50.0" layoutY="345.0" prefHeight="38.0" prefWidth="421.0" />
-      <TextField fx:id="lastNameTextField" layoutX="50.0" layoutY="235.0" prefHeight="38.0" prefWidth="421.0" />
-      <TextField fx:id="townTextField" layoutX="50.0" layoutY="455.0" prefHeight="38.0" prefWidth="421.0" />
-      <TextField fx:id="stateTextFIeld" layoutX="820.0" layoutY="125.0" prefHeight="38.0" prefWidth="421.0" promptText="ex. NY" />
-      <TextField fx:id="areaCodeTextField" layoutX="820.0" layoutY="235.0" prefHeight="38.0" prefWidth="421.0" promptText="ex. 12345" />
-      <TextField fx:id="phoneTextField" layoutX="820.0" layoutY="345.0" prefHeight="38.0" prefWidth="421.0" promptText="ex. 123-456-7890" />
-      <TextField fx:id="dobTextField" layoutX="820.0" layoutY="455.0" prefHeight="38.0" prefWidth="421.0" promptText="ex. 12/34/5678" />
-      <Text layoutX="513.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Profile Page">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Text>
-      <Text layoutX="50.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="50.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address: ">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="50.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Town of Residence: ">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="820.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="820.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area Code: ">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="820.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="820.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Button fx:id="editFieldsButton" layoutX="533.0" layoutY="740.0" mnemonicParsing="false" onAction="#toggleEdit" prefHeight="50.0" prefWidth="235.0" text="Edit Fields Toggle" />
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1300.0">
+      <MenuBar GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
          <menus>
             <Menu mnemonicParsing="false" text="Menu">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToHome" text="Home Page" />
+                  <MenuItem mnemonicParsing="false" onAction="#toggleEdit" text="Toggle Edit" />
                   <MenuItem mnemonicParsing="false" onAction="#closeGUI" text="Close Application" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Ledger" />
+            <Menu mnemonicParsing="false" text="Ledger">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="General Ledger" />
+               </items></Menu>
             <Menu mnemonicParsing="false" text="Store" />
             <Menu mnemonicParsing="false" text="Customer">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToCustomerProfile" text="Customer Profile" />
+                  <MenuItem mnemonicParsing="false" text="Customer Search" />
                </items>
             </Menu>
          </menus>
       </MenuBar>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="firstNameTextField" editable="false" prefHeight="38.0" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="lastNameTextField" editable="false" prefHeight="38.0" prefWidth="421.0" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="streetAddressTextField" editable="false" prefHeight="38.0" prefWidth="421.0" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Town of Residence:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="townTextField" editable="false" prefHeight="38.0" prefWidth="421.0" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="State:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="stateTextFIeld" editable="false" prefHeight="38.0" prefWidth="421.0" promptText="ex. NY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Area Code:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="areaCodeTextField" editable="false" prefHeight="38.0" prefWidth="421.0" promptText="ex. 12345" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="phoneTextField" editable="false" prefHeight="38.0" prefWidth="421.0" promptText="ex. 123-456-7890" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" top="20.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="dobTextField" editable="false" prefHeight="38.0" prefWidth="421.0" promptText="ex. 12/34/5678" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="60.0" right="60.0" top="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Profile Page" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use Menu to Edit Fields" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
    </children>
-</AnchorPane>
+</GridPane>

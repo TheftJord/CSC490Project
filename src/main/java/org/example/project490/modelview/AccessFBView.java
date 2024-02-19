@@ -25,6 +25,12 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
+
+/**
+ * this code is a controller for the gui that appears,
+ *
+ * contains logic to read/write to/from the db
+ */
 public class AccessFBView {
 
 

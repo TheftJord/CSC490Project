@@ -8,6 +8,11 @@ package org.example.project490.models;
  *
  * @author MoaathAlrajab
  */
+
+/**
+ *          TEST CLASS to store informaiton
+ */
+
 public class Person {
     private String name;
     private String major;

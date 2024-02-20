@@ -2,12 +2,29 @@ package org.example.project490;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author Luke Green
  */
-public class HomePageController {
+public class CustomerSearchController {
+    
+    @FXML
+    private TextField firstNameSearchTextField;
+    
+    @FXML
+    private TextField lastNameSearchTextField;
+    
+    @FXML
+    private TextField addressSearchTextField;
+    
+    @FXML
+    private TextField phoneSearchTextField;
+    
+    @FXML
+    private ComboBox customerSelectComboBox;
     
     /**
      * event handler for home page menu button
@@ -21,8 +38,6 @@ public class HomePageController {
     /**
      * event handler for customer profile page menu button
      * will change the screen to the customer profile page view
-     * 
-     * as of right now, this button is labeled "customer page" in the GUI.
      */
     @FXML
     private void switchToCustomerProfile() throws IOException {

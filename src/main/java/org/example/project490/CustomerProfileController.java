@@ -34,9 +34,6 @@ public class CustomerProfileController {
             
     @FXML
     private TextField dobTextField;
-            
-    @FXML
-    private Button editFieldsButton;
     
     /**
      * event handler for home page menu button
@@ -54,6 +51,15 @@ public class CustomerProfileController {
     @FXML
     private void switchToCustomerProfile() throws IOException {
         HelloApplication.setRoot("customerProfile-view");
+    }
+    
+    /**
+     * event handler for customer search page menu button
+     * will change the screen to the customer search page view
+     */
+    @FXML
+    private void switchToCustomerSearch() throws IOException {
+        HelloApplication.setRoot("customerSearch-view");
     }
     
     /**

@@ -48,7 +48,7 @@ public class CustomerProfileController {
      * 
      * @throws IOException
      */
-    @FXML
+    /*@FXML
     private void initialize(){
         /*
          * firstName={space holder};
@@ -59,7 +59,7 @@ public class CustomerProfileController {
          * phoneNumber={space holder};
          * areaCode={space holder};
          * dob={space holder};
-         */
+         
         firstNameTextField.setText(firstName);
         lastNameTextField.setText(lastName);
         streetAddressTextField.setText(streetAddress);
@@ -68,7 +68,7 @@ public class CustomerProfileController {
         phoneTextField.setText(phoneNumber);
         areaCodeTextField.setText(Integer.toString(areaCode));
         dobTextField.setText(dob);
-    }
+    }*/
     
     /**
      * event handler for home page menu button

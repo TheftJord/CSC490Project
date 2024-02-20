@@ -11,6 +11,9 @@ import javafx.scene.control.TextField;
  */
 public class CustomerProfileController {
     
+    /**
+     * universal variables
+     */
     @FXML
     private TextField firstNameTextField;
     
@@ -37,6 +40,35 @@ public class CustomerProfileController {
 
     @FXML
     private Button editFieldsButton;
+    /*/
+    String firstName, lastName, streetAddress, town, state, phoneNumber,dob;
+    int areaCode;
+
+    /**
+     * 
+     * @throws IOException
+     */
+    /*@FXML
+    private void initialize(){
+        /*
+         * firstName={space holder};
+         * lastName={space holder};
+         * streetAddress={space holder};
+         * town={space holder};
+         * state={space holder};
+         * phoneNumber={space holder};
+         * areaCode={space holder};
+         * dob={space holder};
+         
+        firstNameTextField.setText(firstName);
+        lastNameTextField.setText(lastName);
+        streetAddressTextField.setText(streetAddress);
+        townTextField.setText(town);
+        stateTextFIeld.setText(state);
+        phoneTextField.setText(phoneNumber);
+        areaCodeTextField.setText(Integer.toString(areaCode));
+        dobTextField.setText(dob);
+    }*/
     
     String firstName, lastName, streetAddress, town, state, phoneNumber,dob;
     int areaCode;
@@ -131,6 +163,22 @@ public class CustomerProfileController {
             phoneTextField.setEditable(true);
             dobTextField.setEditable(true);
         }
+        pullInformation();
+    }
+
+    /**
+     * this will pull the information from the text fields and then proceed to update the database
+     */
+    @FXML
+    private void pullInformation(){
+        firstName=firstNameTextField.getText();
+        lastName=lastNameTextField.getText();
+        streetAddress=streetAddressTextField.getText();
+        town=townTextField.getText();
+        state=stateTextFIeld.getText();
+        areaCode=Integer.valueOf(firstNameTextField.getText());
+        phoneNumber=phoneTextField.getText();
+        dob=dobTextField.getText();
     }
             
 }

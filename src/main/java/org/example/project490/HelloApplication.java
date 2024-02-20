@@ -27,6 +27,9 @@ public class HelloApplication extends Application {
         stage.setY(screenBounds.getMinY());
         stage.setWidth(screenBounds.getWidth());
         stage.setHeight(screenBounds.getHeight());
+        //minimum resoltuion before GUI controls start overlapping
+        stage.setMinHeight(650);
+        stage.setMinWidth(1000);
         
         stage.show();
     }

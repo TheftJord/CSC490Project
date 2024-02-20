@@ -5,8 +5,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -24,6 +27,46 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </GridPane.margin>
+      </Pane>
       <MenuBar GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
          <menus>
             <Menu mnemonicParsing="false" text="Menu">
@@ -41,7 +84,7 @@
             <Menu mnemonicParsing="false" text="Customer">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" text="Customer Search" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCustomerSearch" text="Customer Search" />
                </items>
             </Menu>
          </menus>
@@ -160,5 +203,13 @@
             <Font size="22.0" />
          </font>
       </Text>
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="10.0" top="30.0" />
+         </GridPane.margin>
+         <image>
+            <Image url="@images/managementLogoSmall.png" />
+         </image>
+      </ImageView>
    </children>
 </GridPane>

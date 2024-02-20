@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -24,6 +25,54 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets top="40.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="-100.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="20.0" top="40.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" top="100.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets right="20.0" top="40.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightskyblue;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </GridPane.margin>
+      </Pane>
       <MenuBar GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
          <menus>
             <Menu mnemonicParsing="false" text="Menu">
@@ -40,7 +89,7 @@
             <Menu mnemonicParsing="false" text="Customer">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToCustomerProfile" text="Customer Profile" />
-                  <MenuItem mnemonicParsing="false" text="Customer Search" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCustomerSearch" text="Customer Search" />
                </items>
             </Menu>
          </menus>
@@ -53,21 +102,21 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-         <font>
-            <Font size="22.0" />
-         </font>
-         <GridPane.margin>
-            <Insets bottom="30.0" />
-         </GridPane.margin>
-      </Text>
       <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <GridPane.margin>
-            <Insets top="30.0" />
+            <Insets />
          </GridPane.margin>
          <image>
-            <Image url="@images/managementLogo.png" />
+            <Image url="@images/managementLogoBlue.png" />
          </image>
       </ImageView>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to The Buisness Management System" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="140.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </GridPane>

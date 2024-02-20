@@ -37,11 +37,10 @@ public class CustomerProfileController {
             
     @FXML
     private TextField dobTextField;
-    
-    
+
     @FXML
     private Button editFieldsButton;
-    /*/
+    
     String firstName, lastName, streetAddress, town, state, phoneNumber,dob;
     int areaCode;
 
@@ -49,7 +48,7 @@ public class CustomerProfileController {
      * 
      * @throws IOException
      */
-    /*@FXML
+    @FXML
     private void initialize(){
         /*
          * firstName={space holder};
@@ -60,7 +59,7 @@ public class CustomerProfileController {
          * phoneNumber={space holder};
          * areaCode={space holder};
          * dob={space holder};
-         
+         */
         firstNameTextField.setText(firstName);
         lastNameTextField.setText(lastName);
         streetAddressTextField.setText(streetAddress);
@@ -69,7 +68,7 @@ public class CustomerProfileController {
         phoneTextField.setText(phoneNumber);
         areaCodeTextField.setText(Integer.toString(areaCode));
         dobTextField.setText(dob);
-    }*/
+    }
     
     /**
      * event handler for home page menu button
@@ -87,6 +86,15 @@ public class CustomerProfileController {
     @FXML
     private void switchToCustomerProfile() throws IOException {
         HelloApplication.setRoot("customerProfile-view");
+    }
+    
+    /**
+     * event handler for customer search page menu button
+     * will change the screen to the customer search page view
+     */
+    @FXML
+    private void switchToCustomerSearch() throws IOException {
+        HelloApplication.setRoot("customerSearch-view");
     }
     
     /**

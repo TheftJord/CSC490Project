@@ -37,10 +37,11 @@ public class CustomerProfileController {
             
     @FXML
     private TextField dobTextField;
-            
+    
+    
     @FXML
     private Button editFieldsButton;
-
+    /*/
     String firstName, lastName, streetAddress, town, state, phoneNumber,dob;
     int areaCode;
 

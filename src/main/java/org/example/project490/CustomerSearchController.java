@@ -83,7 +83,8 @@ public class CustomerSearchController {
             SearchEngine.customerSearch(address);
         }
         else if(phoneNumber!=null){
-            SearchEngine.customerSearch(phoneNumber);
+            int x=0;
+            SearchEngine.customerSearch(phoneNumber, x);
         }
         else{
             a.show();

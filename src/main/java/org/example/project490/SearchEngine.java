@@ -7,6 +7,7 @@ public class SearchEngine extends Thread{
     static int idNumber;
 
     /**
+     * customer search
      * @param firstName
      * @param lastName
      * @return
@@ -41,7 +42,7 @@ public class SearchEngine extends Thread{
      * @param phoneNumber
      * @return
      */
-    public static int customerSearch(String phoneNumber){
+    public static int customerSearch(String phoneNumber, int changer){
         String pNumber="";
         idNumber=0;
         while(phoneNumber!=pNumber){

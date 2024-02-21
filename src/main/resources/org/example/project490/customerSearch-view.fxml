@@ -57,6 +57,9 @@
          <GridPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" />
          </GridPane.margin>
+         <children>
+            <Button layoutX="261.0" layoutY="80.0" mnemonicParsing="false" scaleX="3.0" scaleY="3.0" text="confirm" />
+         </children>
       </Pane>
       <MenuBar GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
          <menus>
